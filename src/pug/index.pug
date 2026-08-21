@@ -257,29 +257,29 @@ html(lang='en')
                             | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
 
         // Clients
-        div.py-5
-            .container
-                .row.align-items-center
-                    .col-md-3.col-sm-6.my-3
-                        a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/microsoft.svg', alt='...', aria-label='Microsoft Logo')
-                    .col-md-3.col-sm-6.my-3
-                        a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/google.svg', alt='...', aria-label='Google Logo')
-                    .col-md-3.col-sm-6.my-3
-                        a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/facebook.svg', alt='...', aria-label='Facebook Logo')
-                    .col-md-3.col-sm-6.my-3
-                        a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/ibm.svg', alt='...', aria-label='IBM Logo')
+        //- div.py-5
+        //-     .container
+        //-         .row.align-items-center
+        //-             .col-md-3.col-sm-6.my-3
+        //-                 a(href='#!')
+        //-                     img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/microsoft.svg', alt='...', aria-label='Microsoft Logo')
+        //-             .col-md-3.col-sm-6.my-3
+        //-                 a(href='#!')
+        //-                     img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/google.svg', alt='...', aria-label='Google Logo')
+        //-             .col-md-3.col-sm-6.my-3
+        //-                 a(href='#!')
+        //-                     img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/facebook.svg', alt='...', aria-label='Facebook Logo')
+        //-             .col-md-3.col-sm-6.my-3
+        //-                 a(href='#!')
+        //-                     img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/ibm.svg', alt='...', aria-label='IBM Logo')
 
         // Contact
         section#contact.page-section
             .container
                 .text-center
                     h2.section-heading.text-uppercase Contact Us
-                    h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-
+                    h3.section-subheading.text-muted Have a project in mind? Get in touch with us today.
+                
                 // * * * * * * * * * * * * * * *
                 // * * SB Forms Contact Form * *
                 // * * * * * * * * * * * * * * *
@@ -289,7 +289,9 @@ html(lang='en')
                 // https://startbootstrap.com/solution/contact-forms
                 // to get an API token!
 
-                form#contactForm(data-sb-form-api-token='API_TOKEN')
+                form#contactForm(
+                    action='https://formspree.io/f/mjybjozo',
+                    method='POST')
                     .row.align-items-stretch.mb-5
                         .col-md-6
                             .form-group
@@ -297,71 +299,69 @@ html(lang='en')
                                 // Name input
                                 input#name.form-control(
                                     type='text',
+                                    name='name',
                                     placeholder='Your Name *',
-                                    data-sb-validations='required'
+                                    required
                                 )
-                                .invalid-feedback(data-sb-feedback='name:required')
-                                    | A name is required.
-
                             .form-group
 
                                 // Email address input
                                 input#email.form-control(
                                     type='email',
+                                    name='email',
                                     placeholder='Your Email *',
-                                    data-sb-validations='required,email'
+                                    required
                                 )
-                                .invalid-feedback(data-sb-feedback='email:required')
-                                    | An email is required.
-                                .invalid-feedback(data-sb-feedback='email:email')
-                                    | Email is not valid.
-
+                               
                             .form-group.mb-md-0
 
                                 // Phone number input
                                 input#phone.form-control(
                                     type='tel',
+                                    name='phone',
                                     placeholder='Your Phone *',
-                                    data-sb-validations='required'
+                                    required
                                 )
-                                .invalid-feedback(data-sb-feedback='phone:required')
-                                    | A phone number is required.
 
                         .col-md-6
                             .form-group.form-group-textarea.mb-md-0
 
                                 // Message input
                                 textarea#message.form-control(
+                                    name='message',
                                     placeholder='Your Message *',
-                                    data-sb-validations='required'
+                                    required
                                 )
-                                .invalid-feedback(data-sb-feedback='message:required')
-                                    | A message is required.
+                                
 
-                    // Submit success message
-                    //
-                    // This is what your users will see when the form
-                    // has successfully submitted
-
-                    #submitSuccessMessage.d-none
-                        .text-center.text-white.mb-3
-                            .fw-bolder Form submission successful!
-                            | To activate this form, sign up at
-                            br
-                            a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
-
-                    // Submit error message
-                    //
-                    // This is what your users will see when there is
-                    // an error submitting the form
-
-                    #submitErrorMessage.d-none
-                        .text-center.text-danger.mb-3 Error sending message!
 
                     // Submit Button
                     .text-center
-                        button#submitButton.btn.btn-primary.btn-xl.text-uppercase.disabled(type='submit') Send Message
+                    button#submitButton.btn.btn-primary.btn-xl.text-uppercase(
+                    type='submit'
+                    ) Send Message
+                    //WASSA
+                    
+                .text-center.mt-4.mb-4
+                    h3.text-white.mb-3 Prefer to contact us directly?
 
+                    .mt-3
+                        a.phone-link(
+                            href='tel:+19542496193'
+                        )
+                            i.fas.fa-phone.me-2
+                            | Call us: (954) 249-6193
+
+                    a.whatsapp-link.mt-3(
+                        href='https://wa.me/9542496193',
+                        target='_blank',
+                        rel='noopener noreferrer'
+                    )
+                        i.fab.fa-whatsapp
+                        | Message us on WhatsApp
+
+                    
+                //WASSA
         // Footer
         footer.footer.py-4
             .container

@@ -51,3 +51,38 @@ p {
         padding: 9rem 0;
     }
 }
+
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background-color: #fff;
+    color: #25D366;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.whatsapp-link i {
+    font-size: 1.7rem;
+}
+
+.whatsapp-link:hover {
+    color: #128C7E;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+.phone-link {
+    color: #27A3E8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.phone-link:hover {
+    color: #25D366;
+    text-decoration: none;
+}
