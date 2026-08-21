@@ -10858,6 +10858,42 @@ p {
     padding: 9rem 0;
   }
 }
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  background-color: #fff;
+  color: #25D366;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.whatsapp-link i {
+  font-size: 1.7rem;
+}
+
+.whatsapp-link:hover {
+  color: #128C7E;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.phone-link {
+  color: #27A3E8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.phone-link:hover {
+  color: #25D366;
+  text-decoration: none;
+}
+
 .btn-xl {
   padding: 1.25rem 2.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -11260,6 +11296,7 @@ section#contact {
   background-image: url("../assets/img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
+  scroll-margin-top: -100px;
 }
 section#contact .section-heading {
   color: #fff;
